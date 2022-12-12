@@ -155,7 +155,6 @@
 |   |   |   |   +--- 9-存储volume.png
 |   |   +--- k8s常用指令.md
 |   |   +--- k8s架构图.png
-|   |   +--- Kubernetes权威指南 第4版.pdf
 |   |   +--- kube_operator_sdk
 |   |   |   +--- operator.md
 |   +--- 03-cka
@@ -394,9 +393,6 @@
 |   |   |   |   +--- readme.md
 |   +--- 02-leetcode
 |   |   +--- LeetCode-Go
-|   +--- labuladong的算法小抄.epub
-|   +--- labuladong的算法小抄.pdf
-|   +--- 编程之法：面试和算法心得
 +--- 08-system design
 |   +--- 图文详解 23 种设计模式.html
 |   +--- 图文详解 23 种设计模式_files
