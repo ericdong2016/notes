@@ -1,6 +1,7 @@
+## 1. udp 
+
 ```
----------------------socket1_udp--------------------------------
-1. 常用于广播
+常用于广播
 ip address：标记网络上的电脑
 mac address:
 
@@ -53,14 +54,15 @@ receive_data[1]  #ip，port
 
 6.udp聊天 （半双工）
 抽取发送和接受消息的方法
+```
 
-----------------socket2_tcp----------------
+## 2. tcp
+
+```
 socket是同时可以收发数据的
 单工
 半双工
 全双工  socket
-
-vi    +10
 
 tcp:可靠传输，三次握手
 采用应答机制
@@ -105,12 +107,14 @@ with使用注意事项：write/  read(用try,except)
 4.tcp短连接，长连接
 短连接：每次传递数据都需要建立连接，关闭数据
 长连接：建立一次连接，多次传递数据，关闭连接
-
-扩展：访问一个网址的过程
-
+```
 
 
-------------------多任务1_线程----------------
+
+## 3. 线程
+
+
+```
 1.
 t1 = threading.Thread(target=sing)
 t2 = threading.Thread(target=dance)
@@ -155,17 +159,18 @@ mutex.release()
 
 线程池
 银行家算法
+```
 
-8.多线程udp聊天
 
------------------多任务2_进程----------------
+
+## 4. 进程
+
+```
 1.进程的状态：
 新建---就绪---运行---死亡
 	   等待（阻塞）
 
 2.进程的创建：
-vi快速注释：V  :  normal i #
-
 method1:
 import multiprocessing
 p1 = multiprocessing.Process(target=test1)
@@ -249,10 +254,13 @@ from multiprocessing import Manager,Pool
 
 q = Manager().Queue()
 p.apply_async(worker,(q,))
+```
 
-6.文件拷贝
 
-------------------多任务3_协程--------------------
+
+## 5. 协程
+
+```
 1.迭代器
 isinstance(xxx,Iterator/Iterable)
 iter(class)
@@ -285,8 +293,13 @@ send():获取值的同时往里面传参数（send(None)）
 线程是操作系统调度的单位
 协程是一个cpu单元，占用资源小，效率高
 多线程，多进程可能是并行，协程在一个线程中，是并发
+```
 
-----------------------------------正则表达式----------------------------
+
+
+## 6. 正则表达式
+
+```
 1.示例：
 import re
 result = re.match("d","donghuan")
@@ -349,6 +362,7 @@ re.match(r"aa(\d+?)","aa2343ddd").group(1)
 re.match(r"aa(\d+?)ddd","aa2343ddd").group(1)
 结果：2343
 
+
 3.补充：
 3.1 re.S 可以让.匹配\n
 
@@ -361,97 +375,40 @@ fjlkadj
 可以换行
 
 3.3如果需要用到某些字符（跟规则冲突），添加\,进行转义
-
-4.练习：提取url,html中的文本(分组)
-
-案例：TODO
-
-----------------------------------http协议，http服务器1----------------------------------
-1.chrome调试器(F12),firefox(ctrl+shift+i)使用
-network:
-element：
-
-右键选项分析
-
-2.http协议了解
-请求：请求头，请求体
-响应：响应头（响应行），响应体
-
-3。
-3次握手：syn11 + syn33 /ack12 + ack34
-
-4次挥手：
-客户端不再发送（关闭发）：client_socket.close()
-服务端（关闭收）：ok() 确认数据
-服务端不再发送（关闭发）：new_socket.close()
-客户端（关闭收）：ok
+```
 
 
-最长等待时间 2msl（2-5min）
-端口占用问题的解决：(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
 
-0 
-<h1>
-内容编码
-链接进度  new_socket.close()两次（子进程中复制了一份父类的）
+## 7. 进阶1
 
+### 7.1 gil
 
------http协议，http服务器2-------------
-http基于socket中的tcp
-1.多进程服务器
-2.多线程服务器 bad file descriptor  new_socket.close()搞得鬼
-3.gevent服务器
-4.单线程非阻塞
-python3建议将tab键换成4个空格
-server_socket.recv()  #不传参出问题，没有默认值
-
-5.epoll服务器
-内存映射
-事件通知
-
-epoll(解决了个数，轮询问题:"select/poll(轮询))
-
-
-----------网络通信过程(d11)--------
-抓包:  面试前todo
-网络协议：网络接口层(物理层，链路层,mac地址)，网际层(ip,arp,)，传输层（tcp,udp（端口）），应用层（应用层，表示层，回话层）
-osi:应用层，表示层，回话层，传输层，网络层，数据链路层，物理层
-网络号+主机号
-
-arp -a
-arp -d  删除项，可达到删除流量限制
-
-访问一个网络的过程：面试前todo
-1.输入域名，默认网关（router mac地址），dns服务器解析域名
-2.tcp的三次握手
-3.发送数据包，服务端解析数据包
-4.tcp的4次挥手
-
-nat转换
-
-
----------------------python提高1------------------
+```
 1.GIL(全局解释器锁)
-多线程gil问题：python解释器（cpython,jpython没有这个问题）的问题
+多线程gil问题：python解释器（cpython, jpython没有这个问题）的问题
 io密集（文件读写，线程，协程（gevent单线程，将等待时间利用来做其他事情））/计算密集（继承）
 
-method1:jpython解释器
+method1:
+	jpython解释器
 method2：
-c语言解决gil问题:
-生成so库文件：gcc xxx.c -shared -o libxxx.so
+	c语言解决gil问题:
+	生成so库文件：gcc xxx.c -shared -o libxxx.so
 
 from ctypes import *
 lib = cdll.loadLibraty("./libdead_loop.so")
+```
 
-胶水语言：如何调其他的语言？？？
 
-2.深拷贝，浅拷贝 (todo)
+
+### 7.2 深拷贝，浅拷贝
+
+```
 import copy
 c = copy.deepcopy(a)
 id 不同，内容独立
 c = copy.copy(a)/ c = a（id相同）
 
-情况一：包含list,dic
+情况1：包含list,dic
 a = [11,22]
 b = [33,44]
 c = [a,b]
@@ -461,7 +418,7 @@ e,c id 不同，id(e[0]),id(c[0])相同，说明创建了一份新的（将a,b�
 
 e中存的是之前c指向的a，b的引用
 
-情况二：
+情况2：
 a = [11,22]
 b = [33,44]
 c = [a,b]
@@ -512,28 +469,41 @@ e = copy.deepcopy(c)  id不同
 浅拷贝对不可变类型和可变类型的copy不同
 copy.copy对于可变类型，会进行浅拷贝
 copy.copy对于不可变类型，不会拷贝，仅仅是指向
+```
 
-3.私有化
+
+
+### 7.3 私有化
+
+```
 _x:私有化属性或方法，不能被其他包导入
 __xx:避免与子类的属性命名冲突，无法在外部访问
 __xx__:魔法对象或属性（例如：__init__）
 xx_:避免与python关键字的冲突
+```
 
-4.import
+
+
+### 7.4 导包
+
+```
+# import 
 import sys
 sys.path
 
-ipython   #import才能用
+# ipython   #import才能用
 from imp import reload
 reload(aa) 
 
 help(reload) 
 
 导常量的时候注意用import common ，不要用 from common import *
+```
 
+### 7.5 多继承
 
--------------------python提高2------------------
-1.多继承，mro顺序
+```
+# 多继承，mro顺序
 python没有重载
 用super()不用类名（导致父类调多次）
 
@@ -541,10 +511,18 @@ tips:super(grason,self).__init__()
 
 print(parent.__mro__)  #调用的先后顺序
 c3算法
+```
 
-2.args,kwargs的拆包
 
-3.类对象，实例对象；类属性，实例属性；静态方法(staticMethod)，实例方法，类方法(classMethod)
+
+### 7.6 args, kwargs 拆包
+
+
+
+### 7.7 类对象，实例对象等
+
+```
+类对象，实例对象；类属性，实例属性；静态方法(staticMethod)，实例方法，类方法(classMethod)
 @classMethod
 def cls_fun(cls):
 	pass
@@ -554,9 +532,13 @@ def static_func():
 	pass
 	
 实例对象.__class__
+```
 
 
-4.property
+
+### 7.8 property
+
+```
 class Foo:
     def func(self):
         pass
@@ -571,7 +553,8 @@ class Foo:
 
 形式：
 1.装饰器
-2.在类中定义值为property对象的类属性
+2.类属性
+
 
 形式一：装饰器
 经典类，具有一种@property装饰器（python2）
@@ -651,8 +634,14 @@ class Money(object):
 a = Money()
 a.money = 100
 print(a.money)
+```
 
-5.魔法属性（了解）
+
+
+### 7.9 魔法属性
+
+```
+魔法属性：
 __doc__；表示类的描述信息
 __module__ （表示当前操作的对象在那个模块）和 __class__（表示当前操作的对象的类是什么）：
 __dict__：类或对象中的所有属性（可看到私有属性）
@@ -661,9 +650,117 @@ __getitem__、__setitem__、__delitem__：用于索引操作，如字典。以�
 __getslice__、__setslice__、__delslice__：该三个方法用于分片操作，如：列表
 
 
-6.with，上下文管理器：
-6.1任何实现了 __enter__() 和 __exit__() 方法的对象都可称之为上下文管理器
-6.2另外方式：
+
+https://www.jb51.net/article/156169.htm
+
+
+# 魔法属性
+__dict__ ： 存储了类定义的所有类属性、类方法等组成的键值对，但不包括继承而来的属性和方法
+
+__doc__  :  该属性记录了类的说明文档
+
+__module__: 该属性记录类定义的位置，如果定义的位置正好是主程序，那么该值为"_main_",否则是类属于的模块的名字
+
+__slot__ :  该属性起到限制动态绑定属性和方法的作用，该属性是一个元组，默认是不存在的，需要手动定义并且只对当前的类起作用，只有添加到元组中的名字才能被动态添加属性，否则报错！
+    e.g:
+        class Person(object):
+        # 限制动态添加的属性或者方法
+        __slots__ = ('name','age','run')
+        
+        def __init__(self):
+            self.height = 100 # 不会报错
+
+        def run(self):
+            print('run')
+        
+        if __name__ == "__main__":
+            from types import MethodType
+            person = Person()
+            person.name = 'cai'
+            person.run = MethodType(run,person)
+            person.run()
+            
+            
+            
+# 魔法方法
+__new__()
+
+__init__()
+
+__repr__()
+
+__call__()
+    In [39]: class FatBoss: 
+    ...:     """描述信息：我就是超级胖子老板，问你怕不怕""" 
+    ...:     def __init__(self,name): 
+    ...:         self.name = name 
+    ...:     def func(self): 
+    ...:         pass 
+    ...:     def __del__(self): 
+    ...:         print("哎呀，我被销毁啦。") 
+    ...:     def __call__(self,*args,**kwargs): 
+    ...:         print("胖子老板：没事你call我干嘛") 
+    ...:         
+    In [40]: fb = FatBoss("我就是胖子老板")   
+    
+    In [43]: fb()                                                                             
+    胖子老板：没事你call我干嘛
+
+__getattr__()         获取一个不存在的属性
+__getattribute__()    获取一个存在的属性
+
+__getitem__(), __setitem__()    索引
+e.g:
+    In [56]: class FatBoss: 
+    ...:     def __getitem__(self,key): 
+    ...:         print('__getitem__',key) 
+    ...:     def __setitem__(self,key,value): 
+    ...:         print("__setitem__",key,value) 
+    ...:     def __delitem__(self,key): 
+    ...:         print("__delitem__",key) 
+    ...:                                                                                  
+
+    In [57]: fb = FatBoss()                                                                   
+    
+    In [58]: result = fb['f1']                                                                
+    __getitem__ f1
+    
+    In [59]: fb['f2'] = "我就是胖子老板"                                                      
+    __setitem__ f2 我就是胖子老板
+    
+    In [60]: del obj['f1'] 
+
+
+
+__getslice__(),__setslice__()   分片
+e.g.:
+    class Foo(object):
+
+    def __getslice__(self, i, j):
+        print('__getslice__', i, j)
+
+    def __setslice__(self, i, j, sequence):
+        print('__setslice__', i, j)
+
+    def __delslice__(self, i, j):
+        print('__delslice__', i, j)
+
+    obj = Foo()
+    
+    obj[-1:1]                   # 自动触发执行 __getslice__
+    obj[0:1] = [11,22,33,44]    # 自动触发执行 __setslice__
+    del obj[0:2]                # 自动触发执行 __delslice__
+```
+
+
+
+### 7.10 上下文管理器
+
+```
+6.1
+	任何实现了 __enter__() 和 __exit__() 方法的对象都可称之为上下文管理器
+	
+6.2 另外方式：
 from contextlib import contextmanager
 
 @contextmanager
@@ -675,534 +772,363 @@ def my_open(path, mode):
 通过 yield 将函数分割成两部分，yield 之前的语句在 __enter__ 方法中执行，yield 之后的语句在 __exit__ 方法中执行。
 紧跟在 yield 后面的值是函数的返回值
 
---------------mysql_1------------
-1.navicat/命令行
-sudo -s 切换达到root/su 
-关系型数据库：
-列---字段
-行---记录
-表
-库
+```
 
-主键（唯一），外键（当前键是另外一张表的主键）
-不区分大小写
 
-sudo apt-get install mysql-server/mysql-client
-sudo apt-get search mysql
 
-与python 交互：pip install pymysql /import pymysql 
+## 8. 进阶2
 
-2.安装
-sudo apt-get install mysql
+### 8.1 闭包
 
-查询：
-ps -aux | grep "mysql"
+```
+例子1：
+# 定义一个函数
+def test(number):
 
-启动
-sudo service mysql start
-开机启动
-sudo /etc/init.d/mysql restart 
+    # 在函数内部再定义一个函数，并且这个函数用到了外边函数的变量，那么将这个函数以及用到的一些变量称之为闭包
+    def test_in(number_in):
+        print("in test_in 函数, number_in is %d" % number_in)
+        return number+number_in
+    # 其实这里返回的就是闭包的结果
+    return test_in
 
-停止
-sudo service mysql stop
-重启
-sudo service mysql restart
 
-配置：
-mysql/mysql.cnf.d/   vi mysqld.cnf port等相关信息
-mysql/conf.d/   
+# 给test函数赋值，这个20就是给参数number
+ret = test(20)
 
-navicat安装：
-删除 .navicat64 
-  
-wine Mono：运行windows的软件
+# 注意这里的100其实给参数number_in
+print(ret(100))
 
-3.数据类型，约束
-数据类型：
-int,bit(0,1实现类似boolean效果)
-decimal(5,2)
-varchar,char,text
-date,time,datetime,year,timestamp
-enum()  #可插入数字来区分，从1开始
+#注 意这里的200其实给参数number_in
+print(ret(200))
 
-TINYINT   1  -128-127(有符号） 0-256（无符号）
-SMALLLINT 2  0-65535
-MEDIUMINT 3  
-INT       4
-BIGINT    8
 
-约束：
-primary key 
-not null
-unique
-foreign key(会降低数据库性能，最好在逻辑层控制)
-default :
 
+例子2：
+def line_conf(a, b):
+    def line(x):
+        return a*x + b
+    return line
 
-对于图片，视频等，在数据库中存路径，将图片上传到文件服务器
+line1 = line_conf(1, 1)
+line2 = line_conf(4, 5)
+print(line1(5))
+print(line2(5))
 
-4.命令行：
+这个例子中，函数line与变量a,b构成闭包。在创建闭包的时候，我们通过line_conf的参数a,b说明了这两个变量的取值，这样，我们就确定了函数的最终形式(y = x + 1和y = 4x + 5)。我们只需要变换参数a,b，就可以获得不同的直线表达函数。由此，我们可以看到，闭包也具有提高代码可复用性的作用。
 
-mysql -u root -p
-quit/exit
+如果没有闭包，我们需要每次创建直线函数的时候同时说明a,b,x。这样，我们就需要更多的参数传递，也减少了代码的可移植性。
 
-数据库：
-show databases;
-use xxx  /select database()
+注意点:
 
-create database xxx charset=utf8   
-(show create database xxx 查看创建数据库编码类型)
-drop database xxx   #删不掉的注意使用``（tab键上面的）
+由于闭包引用了外部函数的局部变量，则外部函数的局部变量没有及时释放，消耗内存
 
 
-数据表：
-show tables;
-desc user ; #查看表结构
-select * from xxx;
 
-create table user(id int unsigned primary key not null auto_increment,name varchar(20),age int default 0 );
 
-insert into user values(0,"laowang",18)
-alter table user add/change（原名 新名）/modidy  字段 类型；
 
-补充：change 多个字段
-alter table goods  
-change cate_name cate_id int unsigned not null,
-change brand_name brand_id int unsigned not null;
+修改外部函数中的变量
+# python3的方法
+def counter(start=0):
+    def incr():
+        nonlocal start
+        start += 1
+        return start
+    return incr
 
-alter table user drop birth;
+c1 = counter(5)
+print(c1())
+print(c1())
 
+c2 = counter(50)
+print(c2())
+print(c2())
 
-select * from user;
-drop table user
+print(c1())
+print(c1())
 
-表记录crud:
-insert into user values(0/null/default,...)  
-insert into user(age,name) values()   
-insert into user(age,name) values(),()#多行插入
+print(c2())
+print(c2())
 
-update user set age=19,name="xx" where id = 2;
 
-delete from user where id = 9;
+# python2的方法
+def counter(start=0):
+    count=[start]
+    def incr():
+        count[0] += 1
+        return count[0]
+    return incr
 
-select * from xxx;
-select id,name from xxx;
-select * from xxx where id = 9;
-select name as 姓名 from user where ....;
+c1 = closeure.counter(5)
+print(c1())  # 6
+print(c1())  # 7
+c2 = closeure.counter(100)
+print(c2())  # 101
+print(c2())  # 102
+```
 
-去除重复：distinct()
 
-直接在控制台
-备份：
-mysqldump -uroot -p xxx > python.sql
 
-还原：
-mysql -uroot -p xxx < python.sql
+### 8.2 装饰器
 
-导入：
-先得建表,同时use该表，最后source xxx.sql
+#### 8.2.1 示例
 
-物理删除：
-逻辑删除：update/alter  bit  
+```
+# 定义函数：完成包裹数据
+def makeBold(fn):
+    def wrapped():
+        return "<b>" + fn() + "</b>"
+    return wrapped
 
-tips:
-(linux)
-edit  (vi 下写多个数据库语句)
-;
+# 定义函数：完成包裹数据
+def makeItalic(fn):
+    def wrapped():
+        return "<i>" + fn() + "</i>"
+    return wrapped
 
----------------mysql_2-------------
-1.条件查询
-比较查询：
->,< ,=,!=
+@makeBold
+def test1():
+    return "hello world-1"
 
-逻辑运算：
-and ,or (不建议使用),not
+@makeItalic
+def test2():
+    return "hello world-2"
+
+@makeBold
+@makeItalic
+def test3():
+    return "hello world-3"
 
-模糊查询：(效率较低)
-like(%（一个或多个）   _(一个) )
-rlike(正则表达式)
+print(test1())
+print(test2())
+print(test3())
 
-范围查询：
-in（不建议使用）
-not in 
-between...and...(闭区间)
-not between...and...
 
-空判断：
-is null
-is not null
+运行结果:
+<b>hello world-1</b>
+<i>hello world-2</i>
+<b><i>hello world-3</i></b>
+```
 
-2.排序：
-order...by...(asc升序，desc(降序))
+#### 8.2.2 作用
 
-exm: order by height desc ,id desc(多个字段)
+```
+引入日志
+函数执行时间统计
+执行函数前预备处理
+执行函数后清理功能
+权限校验等场景
+缓存
+```
 
-3.聚合函数
-sum()
-count()  exm: select count(*) from students where gender = 1;
-max()
-min()
-avg()
-round()  exm:round(123.23,1)  #四舍五入
+#### 8.2.3 无参数的函数
 
-4.分组(通常和聚合一起用)
-group by 
-group_concat()
-having
+```
+from time import ctime, sleep
 
-5.分页
-limit m (个数)/limit m,n  # m: 起始下标，n：个数
+def timefun(func):
+    def wrapped_func():
+        print("%s called at %s" % (func.__name__, ctime()))
+        func()
+    return wrapped_func
 
-6.连接查询：多个表交集查询
-inner join ...on
-exm : select * from students inner join classes on students.cls_id = class.id
-select student.* ,class.name from ...
+@timefun
+def foo():
+    print("I am foo")
 
+foo()
+sleep(2)
+foo()
 
-left join(左连接)：(以左边的为基准，找不到的显示null)
-right join（右连接） 
+上面代码理解装饰器执行行为可理解成：
+foo = timefun(foo)
+# foo先作为参数赋值给func后,foo接收指向timefun返回的wrapped_func
+foo()
+# 调用foo(),即等价调用wrapped_func()
+# 内部函数wrapped_func被引用，所以外部函数的func变量(自由变量)并没有释放
+# func里保存的是原foo函数对象
+```
 
-7.自关联
-案例：省级联动
-method1:表1：所有的省；表2： 所有的市；表三：所有的区
-method2:一张表中不同的p_id :
 
-导入数据库：
-source area.sql
 
-select * from area as province inner join areas as city on city.pid = province.aid having province.atitle = "山东省" limit 15;
+#### 8.2.4  被装饰的函数有参数
 
-8.子查询
-select * from students where height = (select max(height) from students)
+```
+from time import ctime, sleep
 
-列级子查询：select name from classes where id in (select cls_id from students);
-行级子查询：select * from students where (height,age) = (select max(height),max(age) from students);
-in：主查询 where 条件 in (列子查询)
+def timefun(func):
+    def wrapped_func(a, b):
+        print("%s called at %s" % (func.__name__, ctime()))
+        print(a, b)
+        func(a, b)
+    return wrapped_func
 
-数据库设计软件：powerdesign
+@timefun
+def foo(a, b):
+    print(a+b)
 
-9.数据库设计（了解）：
-三范式：
-E-R模型：
+foo(3,5)
+sleep(2)
+foo(2,4)
+```
 
-一对一：
-多对一：多里添加外键
-多对多：需要第三张表（聚合表）
 
 
-10.总结：
-完整的select语句：
+#### 8.2.5 被装饰的函数有不定长参数
 
-select distinct *
-from 表名
-where ....
-group by ... having ...
-order by ...
-limit start,count
+```
+from time import ctime, sleep
 
+def timefun(func):
+    def wrapped_func(*args, **kwargs):
+        print("%s called at %s"%(func.__name__, ctime()))
+        func(*args, **kwargs)
+    return wrapped_func
 
---------------mysql_3-----------
-1.创建商品分类表(todo)  
-写入数据到新表(没有value)： insert into goods_cates(name) select cate_name from goods group by cate_name;
-同步数据（update ...(条件) set xxx = yyy）：update goods as g inner join goods_cates as c on g.cate_name=c.name set g.cate_name=c.id;
+@timefun
+def foo(a, b, c):
+    print(a+b+c)
 
-mysql 开发文档
-表的最小长度 6个字段
+foo(3,5,7)
+sleep(2)
+foo(2,4,9)
+```
 
-2.创建商品品牌表（create ...select...有bug （auto_increment混乱，重启mysql restart 解决）,不建议使用）
-2.1 create table goods_brands (
-    id int unsigned primary key auto_increment,
-    name varchar(40) not null) select brand_name as name from goods group by brand_name;
 
 
-2.2 修改表结构：（多个change）
-alter table goods  
-change cate_name cate_id int unsigned not null,
-change brand_name brand_id int unsigned not null;
+#### 8.2.6 装饰器中的return
 
-2.3 外键：(问题：不加能同步数据么？)
-alter table goods add foreign key (cate_id) references goods_cates(id)
+```
+from time import ctime, sleep
 
-2.4 创建数据表的时候就设置外键约束
-create table goods(
-    id int primary key auto_increment not null,
-    name varchar(40) default '',
-    price decimal(5,2),
-    cate_id int unsigned,
-    brand_id int unsigned,
-    is_show bit default 1,
-    is_saleoff bit default 0,
-    foreign key(cate_id) references goods_cates(id),
-    foreign key(brand_id) references goods_brands(id)
-);
+def timefun(func):
+    def wrapped_func():
+        print("%s called at %s" % (func.__name__, ctime()))
+        func()
+    return wrapped_func
 
-然后再去插入数据
+@timefun
+def foo():
+    print("I am foo")
 
+@timefun
+def getInfo():
+    return '----hahah---'
 
-2.5 取消外键约束
-show create table goods; （可看到外键名称）
-alter table goods drop foreign key 外键名称（？？？外键名称需要用（）包围）;
+foo()
+sleep(2)
+foo()
 
-2.6 总结：
-在实际开发中,很少会使用到外键约束,会极大的降低表更新的效率(每次插入都需要查询)
 
-3.订单表(在创建表的时候插入外键)
-4.顾客表
-5.订单详情表
+print(getInfo())
 
+执行结果:
+foo called at Fri Nov  4 21:55:35 2016
+I am foo
+foo called at Fri Nov  4 21:55:37 2016
+I am foo
+getInfo called at Fri Nov  4 21:55:37 2016
+None
 
-6.python和mysql的交互
 
-6.2 pip3 install pymysql(pip install xx.whl)
-导包解决办法：pycharm 的问题
+如果修改装饰器为return func()，则运行结果：
+foo called at Fri Nov  4 21:55:57 2016
+I am foo
+foo called at Fri Nov  4 21:55:59 2016
+I am foo
+getInfo called at Fri Nov  4 21:55:59 2016
+----hahah---
+```
 
-Pymysql 默认开启事务
-#可增加属性autocommit = false或者conn.autocommit = false
-#查看是否是自动提交 conn.get_autocommit() 
 
-#代码中切换数据库  connect.select_db("")
-#query()
 
+#### 8.2.7 设置外置变量
 
-#游标：cursor.excutemany(插入数据要快)
+```
+#decorator2.py
 
-conn = connect(host="localhost",port =3306,database= "jing_dong",user="root",password="123",charset="utf8")
-cls = conn.cursor()
+from time import ctime, sleep
 
-cls.excute()
+def timefun_arg(pre="hello"):
+    def timefun(func):
+        def wrapped_func():
+            print("%s called at %s %s" % (func.__name__, ctime(), pre))
+            return func()
+        return wrapped_func
+    return timefun
 
-#查询
-cls.fetchall()
-cls.fetchone()
+# 下面的装饰过程
+# 1. 调用timefun_arg("itcast")
+# 2. 将步骤1得到的返回值，即time_fun返回， 然后time_fun(foo)
+# 3. 将time_fun(foo)的结果返回，即wrapped_func
+# 4. 让foo = wrapped_fun，即foo现在指向wrapped_func
+@timefun_arg("itcast")
+def foo():
+    print("I am foo")
 
+@timefun_arg("python")
+def too():
+    print("I am too")
 
-#增删改
-conn.commit()
+foo()
+sleep(2)
+foo()
 
-cls.close()
-conn.close()
+too()
+sleep(2)
+too()
 
-6.3防止sql注入
-param = []
-conn.excute("select * from goods where name = %s",param)
 
-注意：
-1.除了主键外的其他字段默认值不能是0，null,只能是default
-2.Pymysql 默认开启事务
-commit()
-rollback()
+可以理解为
+foo()==timefun_arg("itcast")(foo)()
+```
 
-3."{0} {1}".format(("danier"),("h"))
 
 
-自接创建带外键的表：
-注册：
-登录：
-下订单：
+#### 8.2.8 类装饰器
 
---------------mysql_4---------------
-1.视图（不用,类似python解释器，在sql语句和数据库之间隔了一层，虚拟表）
-创建:
-create view v_goods_info as select ...
-查看：
-select * from v_goods_info
-删除：
-drop view v_goods_info
+```
+装饰器函数其实是这样一个接口约束，它必须接受一个callable对象作为参数，然后返回一个callable对象。在Python中一般callable对象都是函数，但也有例外。只要某个对象重写了 __call__() 方法，那么这个对象就是callable的。
 
-2.事务
-四大特性：（acid）
-原子性(不可再分割，要么成功，要么失败);文件操作（a+）
-一致性（结果是一致的，有增有减）
-隔离性（一个事务在最终提交前，对其他事务是不可见的）
-持久性（是持久化存储的）
+class Test():
+    def __call__(self):
+        print('call me!')
 
-start transaction/begin;
-...
-rollback;
-commit;
+t = Test()
+t()  # call me
 
+类装饰器demo
+class Test(object):
+    def __init__(self, func):
+        print("---初始化---")
+        print("func name is %s"%func.__name__)
+        self.__func = func
+    def __call__(self):
+        print("---装饰器中的功能---")
+        self.__func()
 
-3.索引（大量的查询，树形结构）
-显示索引名：
-show index from test_index;
-创建索引：
-create index title_index on 表名(字段（长度）)
-删除索引：
-drop index title_index on 表名
+#说明：
+#1. 当用Test来装作装饰器对test函数进行装饰的时候，首先会创建Test的实例对象
+#   并且会把test这个函数名当做参数传递到__init__方法中
+#   即在__init__方法中的属性__func指向了test指向的函数
+#
+#2. test指向了用Test创建出来的实例对象
+#
+#3. 当在使用test()进行调用时，就相当于让这个对象()，因此会调用这个对象的__call__方法
+#
+#4. 为了能够在__call__方法中调用原来test指向的函数体，所以在__init__方法中就需要一个实例属性来保存这个函数体的引用
+#   所以才有了self.__func = func这句代码，从而在调用__call__方法中能够调用到test之前的函数体
+@Test
+def test():
+    print("----test---")
+test()
+showpy()#如果把这句话注释，重新运行程序，依然会看到"--初始化--"
 
 
-未开启索引性能检测：
-set profiling =1;
-select * from xxx where id =99999;
-show profiles;
-
-开启索引性能检测：
-create index title_index on xxx
-
-
-注意：
-建立太多的索引将会影响更新和插入的速度，因为它需要同样更新每个索引文件
-占用磁盘空间
-
-4.账户管理
-#权限：create、alter、drop、insert、update、delete、select、all privileges
-#创建用户，设置密码，权限
-grant select on jing_dong.* to 'laowang'@'localhost' identified by '123456'
-
-#新用户登录
-mysql -ulaowang -p
-
-#修改密码
-update user set authentication_string = password[''] where user = "laowang"
-flush privileges
-
-#修改权限
-grand 新权限 on jing_dong.* to 'laowang'@'localhost' with grand option
-flush privileges;
-
-#删除用户
-method1:
-drop user 'laowang@%'
-
-method2:
-delete from user where user='用户名';
-flush privileges
-
-#远程连接：
-修改mysql.cnf ,注释掉bind-address
-mysql -uxxx -pxxx -h+ip
-
-查看所有用户：
-select host,user,authentication_string from user;
-
-查看用户有哪些权限：
-show grants for laowang@localhost;
-
-root密码忘记重置
-
-5.主从配置(提高性能：主服务器生成数据，从服务器上分析；)
-数据备份
-读写分离
-负载均衡
-redis
-
-步骤：
-1.主备份：
-直接在root
-(mysqldump -uroot -p123 jing_dong > jd.sql)
-mysqldump -uroot -p123 --all-databases --lock-all-tables >jd.sql
-
-2.从恢复：
-mysql -uroot -p123 < jd.sql
-
-3.设定主 id,日志文件,
-sudo vim /etc/mysql/mysql.conf/mysqld.cnf
-
-#下面保证不注释
-server-id =1 
-log-bin 
-
-service mysql start
-
-4.从 id
-server-id =2 (一般用ip)
-
-service mysql start
-
-5.同步
-
-主服务器（mysql）
-GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' identified by 'slave';
-FLUSH PRIVILEGES;
-
-主服务器(mysql)
-SHOW MASTER STATUS;
-从服务器：
-change master to master_host='192.168.11.150', master_user='slave', master_password='slave',master_log_file='mysql-bin.000005', master_log_pos=590;
-
-
-查看：
-start slave;
-show slave status;
-
-show master stutus;
-
-注意：连接网线
-
-
----------------mini_web1-------------
-1.wsgi协议(服务器和web框架直接解耦的协议)
-vim  /mai  n向下找，N向上找
-vim  %s///g
-ctrl +R 强制刷新
-
----------------mini_web2------------
-1.闭包
-全局变量
-nonlocal x (python3；python2有cluse...)  
-
-2.装饰器
-多个装饰器装的过程：从下至上； 程序执行的过程：从上至下
-作为拦截器（intercepter） ???
-
-类装饰器可以传参（在方法__call__(self,param)）
-
-
-字符串替换：
-"我的名字是：{0}；我的姓名是：{1}".format("daniel","18")
-
-sorted()排序：
-
-导入数据库，先要use，在source xxx.sql
-
-
----------------mini_web4------------
-1.logging
-1.1写入到文件
-logging.basicConfig(level=logging.INFO,  
-                        filename='./log.txt',  
-                        filemode='a',  
-                        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')  
-						
-
-logging.basicConfig(level = logging.INFO)
-logging.info("访问的是，%s" % file_name)
-logging.warning()
-
-
-1.2既写入到文件中，又输出到终端
-import logging  
-
-# 第一步，创建一个logger  
-logger = logging.getLogger()  
-logger.setLevel(logging.INFO)  # Log等级总开关  
-
-# 第二步，创建一个handler，用于写入日志文件  
-logfile = './log.txt'  
-fh = logging.FileHandler(logfile, mode='a')  # open的打开模式这里可以进行参考
-fh.setLevel(logging.DEBUG)  # 输出到file的log等级的开关  
-
-# 第三步，再创建一个handler，用于输出到控制台  
-ch = logging.StreamHandler()  
-ch.setLevel(logging.WARNING)   # 输出到console的log等级的开关  
-
-# 第四步，定义handler的输出格式  
-formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")  
-fh.setFormatter(formatter)  
-ch.setFormatter(formatter)  
-
-# 第五步，将logger添加到handler里面  
-logger.addHandler(fh)  
-logger.addHandler(ch)  
-
-# 日志  
-logger.debug('这是 logger debug message')  
-logger.info('这是 logger info message')  
-logger.warning('这是 logger warning message')  
-logger.error('这是 logger error message')  
-logger.critical('这是 logger critical message')
-
-2.测试api
-3.urllib.parse.unquote("")
+运行结果如下：
+---初始化---
+func name is test
+---装饰器中的功能---
+----test---
 ```
 
