@@ -1,0 +1,7 @@
+
+
+该代码实现了发布订阅(广播功能)
+
+
+参考文档：
+https://www.rabbitmq.com/tutorials/tutorial-three-python.html

@@ -1,0 +1,31 @@
+
+模糊匹配(更精细的组播)
+
+在topic类型下，可以让队列绑定几个模糊的关键字，之后发送者将数据发送到exchange,  exchange将传入”路由值“和 ”关键字“进行匹配，匹配成功，则将数据发送到指定队列
+
+根据更细致的级别来区分   mysql.*   mysql.error.*
+
+
+表达式符号说明：#代表任意(0个或多个)字符，*代表单个字符
+    例如:
+         #.a 会匹配a.a，aa.a，aaa.a等
+         *.a 会匹配a.a，b.a，c.a等
+
+    注意:
+        使用RoutingKey为#，Exchange Type为topic的时候相当于使用fanout
+
+
+运行
+    python  consumer.py   #
+    python  consumer.py   mysql.*
+    python  consumer.py   mysql.#
+    python  consumer.py   mysql.error.*
+
+
+    python producer.py    info
+    python producer.py    mysql.info
+    python producer.py    mysql.error.info
+
+
+参考文档：  topic
+https://www.rabbitmq.com/tutorials/tutorial-three-python.html

@@ -1,0 +1,27 @@
+direct 又称 routing模式， 实现了组播功能(比如: 根据级别区分不同的组)
+
+
+关键字发送(有选择的接收消息)
+
+发送消息时明确指定某个队列并向其中发送消息，RabbitMQ还支持根据关键字发送，即：队列绑定关键字，发送者将数据根据关键字发送到exchange，
+exchange根据 关键字 判定应该将数据发送至指定队列
+
+
+运行方式：
+    如果你希望只是保存warning和error级别的日志到磁盘，只需要打开控制台并输入：
+    $ python consumer.py warning error > logs_from_rabbit.log
+
+    如果你希望所有的日志信息都输出到屏幕中，打开一个新的终端，然后输入：
+    $ python consumer.py info warning error
+     [*] Waiting for logs. To exit press CTRL+C
+
+    如果要触发一个error级别的日志，只需要输入：
+    $ python consumer.py error "Run. Run. Or it will explode."
+     [x] Sent 'error':'Run. Run. Or it will explode.'
+
+
+    发现只有 error cosumer 拿到了消息
+
+
+参考文档：  routing
+https://www.rabbitmq.com/tutorials/tutorial-three-python.html

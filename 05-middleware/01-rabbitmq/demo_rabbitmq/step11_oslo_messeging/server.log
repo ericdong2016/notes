@@ -1,0 +1,564 @@
+2021-11-05 14:53:12,885 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kombu = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 14:53:12,885 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kafka = oslo_messaging._drivers.impl_kafka:KafkaDriver')
+2021-11-05 14:53:12,885 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('rabbit = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 14:53:13,105 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('amqp = oslo_messaging._drivers.impl_amqp1:ProtonDriver')
+2021-11-05 14:53:13,105 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('fake = oslo_messaging._drivers.impl_fake:FakeDriver')
+2021-11-05 14:53:13,106 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('threading = futurist:ThreadPoolExecutor')
+2021-11-05 14:53:13,137 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('blocking = futurist:SynchronousExecutor')
+2021-11-05 14:53:13,137 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('eventlet = futurist:GreenThreadPoolExecutor')
+2021-11-05 14:53:13,137 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 14:53:13,150 - impl_rabbit.py[line:529] - DEBUG: [80cdfd3d-e8ea-49be-9056-e1ec1efe2120] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 14:53:14,178 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 2.0 seconds)
+2021-11-05 14:53:17,194 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 4.0 seconds)
+2021-11-05 14:53:22,215 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 6.0 seconds)
+2021-11-05 14:53:29,232 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 8.0 seconds)
+2021-11-05 14:53:38,252 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 10.0 seconds)
+2021-11-05 14:53:49,271 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 12.0 seconds)
+2021-11-05 14:54:02,295 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 14.0 seconds)
+2021-11-05 14:54:17,318 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 16.0 seconds)
+2021-11-05 14:54:34,341 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 18.0 seconds)
+2021-11-05 14:54:53,367 - impl_rabbit.py[line:658] - ERROR: Connection failed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。 (retrying in 20.0 seconds)
+2021-11-05 14:55:05,940 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('rabbit = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 14:55:06,129 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('fake = oslo_messaging._drivers.impl_fake:FakeDriver')
+2021-11-05 14:55:06,129 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kombu = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 14:55:06,129 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kafka = oslo_messaging._drivers.impl_kafka:KafkaDriver')
+2021-11-05 14:55:06,129 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('amqp = oslo_messaging._drivers.impl_amqp1:ProtonDriver')
+2021-11-05 14:55:06,129 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('threading = futurist:ThreadPoolExecutor')
+2021-11-05 14:55:06,152 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('blocking = futurist:SynchronousExecutor')
+2021-11-05 14:55:06,152 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('eventlet = futurist:GreenThreadPoolExecutor')
+2021-11-05 14:55:06,152 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 14:55:06,164 - impl_rabbit.py[line:529] - DEBUG: [5a4a5ef7-dd53-4633-b360-235f81a6e47d] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 14:55:06,183 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'version': '3.7.16', 'platform': 'Erlang/OTP 22.0.7', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.', 'cluster_name': 'rabbit@rabbitmq1', 'capabilities': {'authentication_failure_close': True, 'exchange_exchange_bindings': True, 'consumer_cancel_notify': True, 'consumer_priorities': True, 'per_consumer_qos': True, 'connection.blocked': True, 'direct_reply_to': True, 'basic.nack': True, 'publisher_confirms': True}, 'product': 'RabbitMQ'}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 14:55:06,184 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 14:55:06,185 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 14:55:06,186 - impl_rabbit.py[line:558] - DEBUG: [5a4a5ef7-dd53-4633-b360-235f81a6e47d] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9817.
+2021-11-05 14:55:06,186 - impl_rabbit.py[line:247] - DEBUG: [5a4a5ef7-dd53-4633-b360-235f81a6e47d] Queue.declare: test_topic
+2021-11-05 14:55:06,195 - impl_rabbit.py[line:247] - DEBUG: [5a4a5ef7-dd53-4633-b360-235f81a6e47d] Queue.declare: test_topic.test_server
+2021-11-05 14:55:06,203 - impl_rabbit.py[line:247] - DEBUG: [5a4a5ef7-dd53-4633-b360-235f81a6e47d] Queue.declare: test_topic_fanout_cd7c458057d045d8a063a9a20f16987f
+2021-11-05 14:55:06,211 - server.py[line:41] - INFO: startting server
+2021-11-05 14:55:06,213 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,213 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 16/16, monotonic - 367307.468, last_heartbeat_sent - 367307.468, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,215 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,215 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367307.468, last_heartbeat_sent - 367307.468, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,216 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,216 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367307.468, last_heartbeat_sent - 367307.468, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,218 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,218 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367307.468, last_heartbeat_sent - 367307.468, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,220 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:06,220 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367307.484, last_heartbeat_sent - 367307.468, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:07,220 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:07,220 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367308.484, last_heartbeat_sent - 367307.468, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:09,221 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:09,223 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367310.484, last_heartbeat_sent - 367307.468, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,515 - amqpdriver.py[line:285] - DEBUG: received message msg_id: 7679c405bddb4229b25f745327e80072 reply to reply_02eb4a48587e4a5bb8e2f8b913c080de
+2021-11-05 14:55:10,515 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,516 - server.py[line:28] - INFO: server params:
+2021-11-05 14:55:10,516 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 17/19, monotonic - 367311.765, last_heartbeat_sent - 367311.765, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,516 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 14:55:10,518 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,518 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367311.781, last_heartbeat_sent - 367311.765, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,519 - impl_rabbit.py[line:529] - DEBUG: [3472efdf-81e1-4ae9-9830-679ec6fa5862] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 14:55:10,527 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'version': '3.7.16', 'platform': 'Erlang/OTP 22.0.7', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.', 'cluster_name': 'rabbit@rabbitmq1', 'capabilities': {'authentication_failure_close': True, 'exchange_exchange_bindings': True, 'consumer_cancel_notify': True, 'consumer_priorities': True, 'per_consumer_qos': True, 'connection.blocked': True, 'direct_reply_to': True, 'basic.nack': True, 'publisher_confirms': True}, 'product': 'RabbitMQ'}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 14:55:10,528 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 14:55:10,530 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 14:55:10,530 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:10,531 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 4/4, monotonic - 367311.781, last_heartbeat_sent - 367311.781, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:10,531 - impl_rabbit.py[line:558] - DEBUG: [3472efdf-81e1-4ae9-9830-679ec6fa5862] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9828.
+2021-11-05 14:55:10,531 - amqpdriver.py[line:122] - DEBUG: sending reply msg_id: 7679c405bddb4229b25f745327e80072 reply queue: reply_02eb4a48587e4a5bb8e2f8b913c080de time elapsed: 0.01600000000325963s
+2021-11-05 14:55:10,538 - amqpdriver.py[line:287] - DEBUG: received message with unique_id: 28463d39744c437f9bfbb6a1b7b9cfb5
+2021-11-05 14:55:10,538 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,539 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 18/22, monotonic - 367311.796, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,541 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,541 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367311.796, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,543 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,543 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367311.796, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,544 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,544 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367311.796, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,546 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,546 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367311.796, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,548 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:10,548 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367311.812, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:11,549 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:11,549 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367312.812, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:13,550 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:13,550 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367314.812, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:17,550 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:17,550 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367318.812, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:25,533 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:25,533 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 4/4, now - 6/6, monotonic - 367326.796, last_heartbeat_sent - 367326.796, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:25,551 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:25,551 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367326.812, last_heartbeat_sent - 367311.796, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:40,535 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:40,535 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 6/6, monotonic - 367341.796, last_heartbeat_sent - 367326.796, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:44,901 - amqpdriver.py[line:285] - DEBUG: received message msg_id: 0a84dcd6aa234d1184f0fe8438ef5b8a reply to reply_27bbe10c96b14025bc8476b7800b872d
+2021-11-05 14:55:44,902 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,902 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 19/26, monotonic - 367346.156, last_heartbeat_sent - 367346.156, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,902 - server.py[line:28] - INFO: server params:
+2021-11-05 14:55:44,902 - amqpdriver.py[line:122] - DEBUG: sending reply msg_id: 0a84dcd6aa234d1184f0fe8438ef5b8a reply queue: reply_27bbe10c96b14025bc8476b7800b872d time elapsed: 0.0s
+2021-11-05 14:55:44,904 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,904 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 19/26, now - 19/26, monotonic - 367346.156, last_heartbeat_sent - 367346.156, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,905 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,905 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 19/26, now - 19/26, monotonic - 367346.156, last_heartbeat_sent - 367346.156, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,906 - amqpdriver.py[line:287] - DEBUG: received message with unique_id: cc58139e1c0949168ff526102a325efb
+2021-11-05 14:55:44,907 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,907 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 19/26, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,908 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,908 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,909 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,909 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,911 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,911 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,912 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,912 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,914 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,914 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,915 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,915 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,916 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,916 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,917 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,917 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,919 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,919 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,920 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,920 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,922 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,922 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.171, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,923 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:44,924 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367346.187, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:45,924 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:45,924 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367347.187, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:47,924 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:47,924 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367349.187, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:51,924 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:51,924 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367353.187, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:55,537 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:55,537 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 7/8, monotonic - 367356.796, last_heartbeat_sent - 367356.796, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:55:59,925 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:55:59,925 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 20/29, monotonic - 367361.187, last_heartbeat_sent - 367346.171, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,136 - amqpdriver.py[line:285] - DEBUG: received message msg_id: d6d82868b10045268139acf9175d8bc1 reply to reply_6a7cf6b5410242808185b96f7180ecf2
+2021-11-05 14:56:01,136 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,137 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/29, now - 21/32, monotonic - 367362.39, last_heartbeat_sent - 367362.39, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,137 - server.py[line:28] - INFO: server params:
+2021-11-05 14:56:01,137 - amqpdriver.py[line:122] - DEBUG: sending reply msg_id: d6d82868b10045268139acf9175d8bc1 reply queue: reply_6a7cf6b5410242808185b96f7180ecf2 time elapsed: 0.0s
+2021-11-05 14:56:01,138 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,138 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 21/32, now - 21/32, monotonic - 367362.39, last_heartbeat_sent - 367362.39, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,140 - amqpdriver.py[line:287] - DEBUG: received message with unique_id: ed69b03292c04f0e9a5b23017608e886
+2021-11-05 14:56:01,141 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,141 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 21/32, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,143 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,143 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,145 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,145 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,147 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,147 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,148 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,148 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,150 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,150 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,152 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,152 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,154 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,154 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,156 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,156 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.406, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,158 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:01,158 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367362.421, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:02,158 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:02,159 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367363.421, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:04,159 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:04,159 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367365.421, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:08,160 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:08,160 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367369.421, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:10,539 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:56:10,539 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 7/8, now - 8/9, monotonic - 367371.796, last_heartbeat_sent - 367371.796, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:56:16,161 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:16,161 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367377.421, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:25,541 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:56:25,541 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 8/9, now - 8/9, monotonic - 367386.796, last_heartbeat_sent - 367371.796, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:56:31,161 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:31,161 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367392.421, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:32,162 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:32,162 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/35, monotonic - 367393.421, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:40,543 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:56:40,544 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 8/9, now - 8/9, monotonic - 367401.796, last_heartbeat_sent - 367371.796, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:56:51,188 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:51,188 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 22/35, now - 22/36, monotonic - 367412.453, last_heartbeat_sent - 367362.406, heartbeat int. - 60 for connection 12face64c74b4753bfc3fe6261fad232
+2021-11-05 14:56:55,545 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:56:55,545 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 8/9, now - 8/10, monotonic - 367416.796, last_heartbeat_sent - 367371.796, heartbeat int. - 60 for connection 2370a84828b8487d9473e665005c3751
+2021-11-05 14:58:15,503 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('amqp = oslo_messaging._drivers.impl_amqp1:ProtonDriver')
+2021-11-05 14:58:15,503 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('fake = oslo_messaging._drivers.impl_fake:FakeDriver')
+2021-11-05 14:58:15,503 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kafka = oslo_messaging._drivers.impl_kafka:KafkaDriver')
+2021-11-05 14:58:15,503 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kombu = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 14:58:15,503 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('rabbit = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 14:58:15,686 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('eventlet = futurist:GreenThreadPoolExecutor')
+2021-11-05 14:58:15,686 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('threading = futurist:ThreadPoolExecutor')
+2021-11-05 14:58:15,708 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('blocking = futurist:SynchronousExecutor')
+2021-11-05 14:58:15,710 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 14:58:15,720 - impl_rabbit.py[line:529] - DEBUG: [a079001f-4033-4488-8526-61f0f8deb2a7] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 14:58:15,739 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'cluster_name': 'rabbit@rabbitmq1', 'product': 'RabbitMQ', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'version': '3.7.16', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.', 'platform': 'Erlang/OTP 22.0.7', 'capabilities': {'publisher_confirms': True, 'consumer_cancel_notify': True, 'consumer_priorities': True, 'authentication_failure_close': True, 'per_consumer_qos': True, 'connection.blocked': True, 'basic.nack': True, 'exchange_exchange_bindings': True, 'direct_reply_to': True}}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 14:58:15,741 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 14:58:15,742 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 14:58:15,742 - impl_rabbit.py[line:558] - DEBUG: [a079001f-4033-4488-8526-61f0f8deb2a7] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9915.
+2021-11-05 14:58:15,742 - impl_rabbit.py[line:247] - DEBUG: [a079001f-4033-4488-8526-61f0f8deb2a7] Queue.declare: test_topic
+2021-11-05 14:58:15,745 - impl_rabbit.py[line:247] - DEBUG: [a079001f-4033-4488-8526-61f0f8deb2a7] Queue.declare: test_topic.test_server
+2021-11-05 14:58:15,747 - impl_rabbit.py[line:247] - DEBUG: [a079001f-4033-4488-8526-61f0f8deb2a7] Queue.declare: test_topic_fanout_081064cdbd994344a41a896416654e4d
+2021-11-05 14:58:15,754 - server.py[line:42] - INFO: startting server
+2021-11-05 14:58:15,755 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,755 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 16/16, monotonic - 367497.015, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,757 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,757 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367497.015, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,758 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,758 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367497.015, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,760 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,760 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367497.015, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,761 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,761 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367497.015, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,763 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,763 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367497.015, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,764 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,764 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367497.015, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,766 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:15,766 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367497.031, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:16,766 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:16,766 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367498.031, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:18,767 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:18,767 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367500.031, last_heartbeat_sent - 367497.015, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,166 - amqpdriver.py[line:285] - DEBUG: received message msg_id: 8448949ed2f44764a58bcb8921fc4b75 reply to reply_60fc578e03e54e428ac7cd247c05296b
+2021-11-05 14:58:21,167 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,167 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 17/19, monotonic - 367502.421, last_heartbeat_sent - 367502.421, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,167 - server.py[line:29] - INFO: server params:
+2021-11-05 14:58:21,167 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 14:58:21,168 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,168 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367502.421, last_heartbeat_sent - 367502.421, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,169 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,169 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367502.421, last_heartbeat_sent - 367502.421, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,170 - impl_rabbit.py[line:529] - DEBUG: [d72aa224-3187-4fa8-bcd2-3f23ef1b6a84] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 14:58:21,174 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,174 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367502.437, last_heartbeat_sent - 367502.421, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,187 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'cluster_name': 'rabbit@rabbitmq1', 'product': 'RabbitMQ', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'version': '3.7.16', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.', 'platform': 'Erlang/OTP 22.0.7', 'capabilities': {'publisher_confirms': True, 'consumer_cancel_notify': True, 'consumer_priorities': True, 'authentication_failure_close': True, 'per_consumer_qos': True, 'connection.blocked': True, 'basic.nack': True, 'exchange_exchange_bindings': True, 'direct_reply_to': True}}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 14:58:21,189 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 14:58:21,189 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 14:58:21,190 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:58:21,190 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 4/4, monotonic - 367502.453, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:58:21,190 - impl_rabbit.py[line:558] - DEBUG: [d72aa224-3187-4fa8-bcd2-3f23ef1b6a84] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9920.
+2021-11-05 14:58:21,190 - amqpdriver.py[line:122] - DEBUG: sending reply msg_id: 8448949ed2f44764a58bcb8921fc4b75 reply queue: reply_60fc578e03e54e428ac7cd247c05296b time elapsed: 0.03200000000651926s
+2021-11-05 14:58:21,195 - amqpdriver.py[line:287] - DEBUG: received message with unique_id: c079dd20616441b2ae2de3ff8aa4b1ea
+2021-11-05 14:58:21,196 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,196 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 18/22, monotonic - 367502.453, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,197 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,197 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367502.453, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,199 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,199 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367502.453, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,200 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,200 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367502.453, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,201 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,201 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367502.453, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,203 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,203 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367502.453, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,204 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:21,204 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367502.468, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:22,204 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:22,205 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367503.468, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:24,205 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:24,205 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367505.468, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:28,206 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:28,206 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367509.468, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:36,192 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:58:36,192 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 4/4, now - 6/6, monotonic - 367517.453, last_heartbeat_sent - 367517.453, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:58:36,207 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:36,207 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367517.468, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:58:51,193 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:58:51,193 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 6/6, monotonic - 367532.453, last_heartbeat_sent - 367517.453, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:00,742 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:59:00,742 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/23, monotonic - 367542.0, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:59:06,195 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:06,195 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 6/7, monotonic - 367547.453, last_heartbeat_sent - 367517.453, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:21,197 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:21,197 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/7, now - 6/7, monotonic - 367562.453, last_heartbeat_sent - 367517.453, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:30,743 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:59:30,743 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/23, now - 18/24, monotonic - 367572.0, last_heartbeat_sent - 367502.453, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:59:30,743 - connection.py[line:743] - DEBUG: heartbeat_tick: sending heartbeat for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:59:32,743 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:59:32,743 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/24, now - 19/24, monotonic - 367574.0, last_heartbeat_sent - 367574.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 14:59:36,200 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:36,200 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/7, now - 6/8, monotonic - 367577.453, last_heartbeat_sent - 367517.453, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:51,203 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:51,203 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/8, now - 6/8, monotonic - 367592.453, last_heartbeat_sent - 367517.453, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 14:59:51,203 - connection.py[line:743] - DEBUG: heartbeat_tick: sending heartbeat for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:00,744 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:00:00,744 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 19/24, now - 19/25, monotonic - 367602.0, last_heartbeat_sent - 367574.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:00:06,205 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:06,205 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/8, now - 7/9, monotonic - 367607.468, last_heartbeat_sent - 367607.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:21,207 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:21,207 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 7/9, now - 7/9, monotonic - 367622.468, last_heartbeat_sent - 367607.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:30,744 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:00:30,744 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 19/25, now - 19/26, monotonic - 367632.0, last_heartbeat_sent - 367574.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:00:36,208 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:36,208 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 7/9, now - 7/10, monotonic - 367637.468, last_heartbeat_sent - 367607.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:36,744 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:00:36,744 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 19/26, now - 19/26, monotonic - 367638.0, last_heartbeat_sent - 367574.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:00:36,744 - connection.py[line:743] - DEBUG: heartbeat_tick: sending heartbeat for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:00:51,211 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:00:51,211 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 7/10, now - 7/10, monotonic - 367652.468, last_heartbeat_sent - 367607.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:00,741 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:00,741 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 19/26, now - 20/27, monotonic - 367662.0, last_heartbeat_sent - 367662.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:06,213 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:06,213 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 7/10, now - 7/11, monotonic - 367667.468, last_heartbeat_sent - 367607.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:15,741 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:15,741 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/27, now - 20/27, monotonic - 367677.0, last_heartbeat_sent - 367662.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:21,215 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:21,215 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 7/11, now - 7/11, monotonic - 367682.468, last_heartbeat_sent - 367607.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:21,215 - connection.py[line:743] - DEBUG: heartbeat_tick: sending heartbeat for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:30,743 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:30,743 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/27, now - 20/28, monotonic - 367692.0, last_heartbeat_sent - 367662.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:36,217 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:36,217 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 7/11, now - 8/12, monotonic - 367697.468, last_heartbeat_sent - 367697.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:45,743 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:45,743 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/28, now - 20/28, monotonic - 367707.0, last_heartbeat_sent - 367662.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:01:51,219 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:01:51,219 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 8/12, now - 8/12, monotonic - 367712.484, last_heartbeat_sent - 367697.468, heartbeat int. - 60 for connection d19ea95fbbcb4950a0ddbbebbede51ad
+2021-11-05 15:02:00,744 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:02:00,744 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 20/28, now - 20/29, monotonic - 367722.0, last_heartbeat_sent - 367662.0, heartbeat int. - 60 for connection a2794040a486450aa24799efc4641a3c
+2021-11-05 15:02:04,070 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('rabbit = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 15:02:04,255 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kombu = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 15:02:04,255 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('fake = oslo_messaging._drivers.impl_fake:FakeDriver')
+2021-11-05 15:02:04,255 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('amqp = oslo_messaging._drivers.impl_amqp1:ProtonDriver')
+2021-11-05 15:02:04,255 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kafka = oslo_messaging._drivers.impl_kafka:KafkaDriver')
+2021-11-05 15:02:04,256 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('threading = futurist:ThreadPoolExecutor')
+2021-11-05 15:02:04,279 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('blocking = futurist:SynchronousExecutor')
+2021-11-05 15:02:04,279 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('eventlet = futurist:GreenThreadPoolExecutor')
+2021-11-05 15:02:04,280 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 15:02:04,291 - impl_rabbit.py[line:529] - DEBUG: [c18e90ac-48de-4fd0-8285-ef4fe0e6a7d6] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 15:02:04,323 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'cluster_name': 'rabbit@rabbitmq1', 'platform': 'Erlang/OTP 22.0.7', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'version': '3.7.16', 'capabilities': {'consumer_priorities': True, 'basic.nack': True, 'connection.blocked': True, 'exchange_exchange_bindings': True, 'publisher_confirms': True, 'authentication_failure_close': True, 'direct_reply_to': True, 'per_consumer_qos': True, 'consumer_cancel_notify': True}, 'product': 'RabbitMQ', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.'}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 15:02:04,324 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 15:02:04,325 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 15:02:04,326 - impl_rabbit.py[line:558] - DEBUG: [c18e90ac-48de-4fd0-8285-ef4fe0e6a7d6] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9970.
+2021-11-05 15:02:04,326 - impl_rabbit.py[line:247] - DEBUG: [c18e90ac-48de-4fd0-8285-ef4fe0e6a7d6] Queue.declare: test_topic
+2021-11-05 15:02:04,342 - impl_rabbit.py[line:247] - DEBUG: [c18e90ac-48de-4fd0-8285-ef4fe0e6a7d6] Queue.declare: test_topic.test_server
+2021-11-05 15:02:04,351 - impl_rabbit.py[line:247] - DEBUG: [c18e90ac-48de-4fd0-8285-ef4fe0e6a7d6] Queue.declare: test_topic_fanout_889b13fe03fe4a53a58a353f218af78f
+2021-11-05 15:02:04,466 - server.py[line:42] - INFO: startting server
+2021-11-05 15:02:04,475 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:04,475 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 16/16, monotonic - 367725.734, last_heartbeat_sent - 367725.734, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:04,476 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:04,476 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367725.734, last_heartbeat_sent - 367725.734, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:05,476 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:05,476 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367726.734, last_heartbeat_sent - 367725.734, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:07,477 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:07,477 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367728.734, last_heartbeat_sent - 367725.734, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,762 - amqpdriver.py[line:285] - DEBUG: received message msg_id: 7f789af8a50d480782c8c2cf809cf697 reply to reply_60fc578e03e54e428ac7cd247c05296b
+2021-11-05 15:02:09,763 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,763 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 17/19, monotonic - 367731.015, last_heartbeat_sent - 367731.015, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,764 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,770 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 15:02:09,770 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367731.031, last_heartbeat_sent - 367731.015, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,772 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,772 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367731.031, last_heartbeat_sent - 367731.015, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,773 - impl_rabbit.py[line:529] - DEBUG: [16212930-8ca8-4e2d-88f1-06b0421488a2] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 15:02:09,790 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'cluster_name': 'rabbit@rabbitmq1', 'platform': 'Erlang/OTP 22.0.7', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'version': '3.7.16', 'capabilities': {'consumer_priorities': True, 'basic.nack': True, 'connection.blocked': True, 'exchange_exchange_bindings': True, 'publisher_confirms': True, 'authentication_failure_close': True, 'direct_reply_to': True, 'per_consumer_qos': True, 'consumer_cancel_notify': True}, 'product': 'RabbitMQ', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.'}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 15:02:09,791 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 15:02:09,793 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 15:02:09,793 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:02:09,793 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 4/4, monotonic - 367731.046, last_heartbeat_sent - 367731.046, heartbeat int. - 60 for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:02:09,793 - impl_rabbit.py[line:558] - DEBUG: [16212930-8ca8-4e2d-88f1-06b0421488a2] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9973.
+2021-11-05 15:02:09,793 - amqpdriver.py[line:122] - DEBUG: sending reply msg_id: 7f789af8a50d480782c8c2cf809cf697 reply queue: reply_60fc578e03e54e428ac7cd247c05296b time elapsed: 0.030999999959021807s
+2021-11-05 15:02:09,798 - amqpdriver.py[line:287] - DEBUG: received message with unique_id: 9fa055d4ac104a9caa5eb7392bed7bab
+2021-11-05 15:02:09,798 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,798 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 18/22, monotonic - 367731.062, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,801 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,801 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367731.062, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,803 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,803 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367731.062, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,805 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,805 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367731.062, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,807 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,807 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367731.062, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,809 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,809 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367731.062, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,811 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,811 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367731.062, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,813 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:09,813 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367731.078, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:10,813 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:10,813 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367732.078, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:12,813 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:12,813 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367734.078, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:16,813 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:16,814 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367738.078, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:24,795 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:02:24,795 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 4/4, now - 6/6, monotonic - 367746.046, last_heartbeat_sent - 367746.046, heartbeat int. - 60 for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:02:24,815 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:24,815 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367746.078, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:39,798 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:02:39,798 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 6/6, monotonic - 367761.062, last_heartbeat_sent - 367746.046, heartbeat int. - 60 for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:02:49,326 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:49,326 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/23, monotonic - 367770.578, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:02:54,800 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:02:54,800 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 6/7, monotonic - 367776.062, last_heartbeat_sent - 367746.046, heartbeat int. - 60 for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:03:04,326 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:03:04,326 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/23, now - 18/23, monotonic - 367785.578, last_heartbeat_sent - 367731.062, heartbeat int. - 60 for connection e0c2d7915265497ca100767d492a5fd9
+2021-11-05 15:03:09,802 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:03:09,802 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/7, now - 6/7, monotonic - 367791.062, last_heartbeat_sent - 367746.046, heartbeat int. - 60 for connection 2f08e3af603147b89e999b17d04ddc2a
+2021-11-05 15:03:16,330 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kafka = oslo_messaging._drivers.impl_kafka:KafkaDriver')
+2021-11-05 15:03:16,331 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kombu = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 15:03:16,331 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('amqp = oslo_messaging._drivers.impl_amqp1:ProtonDriver')
+2021-11-05 15:03:16,331 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('rabbit = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 15:03:16,514 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('fake = oslo_messaging._drivers.impl_fake:FakeDriver')
+2021-11-05 15:03:16,514 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('threading = futurist:ThreadPoolExecutor')
+2021-11-05 15:03:16,537 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('blocking = futurist:SynchronousExecutor')
+2021-11-05 15:03:16,537 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('eventlet = futurist:GreenThreadPoolExecutor')
+2021-11-05 15:03:16,537 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 15:03:16,548 - impl_rabbit.py[line:529] - DEBUG: [149c1935-9a5f-4da5-a270-985d37d79e87] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 15:03:16,568 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'cluster_name': 'rabbit@rabbitmq1', 'version': '3.7.16', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'product': 'RabbitMQ', 'platform': 'Erlang/OTP 22.0.7', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.', 'capabilities': {'basic.nack': True, 'direct_reply_to': True, 'publisher_confirms': True, 'per_consumer_qos': True, 'connection.blocked': True, 'authentication_failure_close': True, 'consumer_cancel_notify': True, 'consumer_priorities': True, 'exchange_exchange_bindings': True}}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 15:03:16,569 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 15:03:16,571 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 15:03:16,571 - impl_rabbit.py[line:558] - DEBUG: [149c1935-9a5f-4da5-a270-985d37d79e87] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9989.
+2021-11-05 15:03:16,572 - impl_rabbit.py[line:247] - DEBUG: [149c1935-9a5f-4da5-a270-985d37d79e87] Queue.declare: test_topic
+2021-11-05 15:03:16,574 - impl_rabbit.py[line:247] - DEBUG: [149c1935-9a5f-4da5-a270-985d37d79e87] Queue.declare: test_topic.test_server
+2021-11-05 15:03:16,577 - impl_rabbit.py[line:247] - DEBUG: [149c1935-9a5f-4da5-a270-985d37d79e87] Queue.declare: test_topic_fanout_92d58f3a9a154ca7b8ebc1629daf3521
+2021-11-05 15:03:16,586 - server.py[line:44] - INFO: startting server
+2021-11-05 15:03:16,588 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,588 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 16/16, monotonic - 367797.843, last_heartbeat_sent - 367797.843, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,590 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,590 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367797.843, last_heartbeat_sent - 367797.843, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,592 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,592 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367797.843, last_heartbeat_sent - 367797.843, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,594 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,594 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367797.843, last_heartbeat_sent - 367797.843, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,595 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:16,595 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367797.859, last_heartbeat_sent - 367797.843, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:17,596 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:17,596 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367798.859, last_heartbeat_sent - 367797.843, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:19,597 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:19,597 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367800.859, last_heartbeat_sent - 367797.843, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,720 - amqpdriver.py[line:285] - DEBUG: received message msg_id: 330f12e93cdc483f9ce983af2e370cac reply to reply_60fc578e03e54e428ac7cd247c05296b
+2021-11-05 15:03:22,720 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,720 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 17/19, monotonic - 367803.984, last_heartbeat_sent - 367803.984, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,721 - server.py[line:29] - INFO: ******************************
+2021-11-05 15:03:22,722 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,725 - server.py[line:31] - INFO: ******************************
+2021-11-05 15:03:22,725 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367803.984, last_heartbeat_sent - 367803.984, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,725 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 15:03:22,727 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,727 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367803.984, last_heartbeat_sent - 367803.984, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,728 - impl_rabbit.py[line:529] - DEBUG: [e2443426-5825-4e95-a539-28fff387709a] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 15:03:22,728 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,733 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367803.984, last_heartbeat_sent - 367803.984, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,735 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,735 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367804.0, last_heartbeat_sent - 367803.984, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,746 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'cluster_name': 'rabbit@rabbitmq1', 'version': '3.7.16', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'product': 'RabbitMQ', 'platform': 'Erlang/OTP 22.0.7', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.', 'capabilities': {'basic.nack': True, 'direct_reply_to': True, 'publisher_confirms': True, 'per_consumer_qos': True, 'connection.blocked': True, 'authentication_failure_close': True, 'consumer_cancel_notify': True, 'consumer_priorities': True, 'exchange_exchange_bindings': True}}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 15:03:22,747 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 15:03:22,748 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 15:03:22,749 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 3ed49aad552a4043b69c45b7d8c275a4
+2021-11-05 15:03:22,749 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 4/4, monotonic - 367804.0, last_heartbeat_sent - 367804.0, heartbeat int. - 60 for connection 3ed49aad552a4043b69c45b7d8c275a4
+2021-11-05 15:03:22,749 - impl_rabbit.py[line:558] - DEBUG: [e2443426-5825-4e95-a539-28fff387709a] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9992.
+2021-11-05 15:03:22,749 - amqpdriver.py[line:122] - DEBUG: sending reply msg_id: 330f12e93cdc483f9ce983af2e370cac reply queue: reply_60fc578e03e54e428ac7cd247c05296b time elapsed: 0.01600000000325963s
+2021-11-05 15:03:22,754 - amqpdriver.py[line:287] - DEBUG: received message with unique_id: 99ab1bba381e4953adb1b7c5ce89cf93
+2021-11-05 15:03:22,755 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,755 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,757 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,757 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,758 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,758 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,760 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,760 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,761 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,761 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,762 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,762 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,764 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,764 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,765 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,765 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.015, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,767 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:22,767 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367804.031, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:23,767 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:23,767 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367805.031, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:25,767 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:25,767 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367807.031, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:29,767 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:29,767 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367811.031, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:37,751 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 3ed49aad552a4043b69c45b7d8c275a4
+2021-11-05 15:03:37,751 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 4/4, now - 6/6, monotonic - 367819.015, last_heartbeat_sent - 367819.015, heartbeat int. - 60 for connection 3ed49aad552a4043b69c45b7d8c275a4
+2021-11-05 15:03:37,768 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:37,768 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367819.031, last_heartbeat_sent - 367804.015, heartbeat int. - 60 for connection 26e2da31f563418f8ca0a0318cd7a858
+2021-11-05 15:03:50,320 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('rabbit = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 15:03:50,521 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('fake = oslo_messaging._drivers.impl_fake:FakeDriver')
+2021-11-05 15:03:50,521 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kafka = oslo_messaging._drivers.impl_kafka:KafkaDriver')
+2021-11-05 15:03:50,521 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('kombu = oslo_messaging._drivers.impl_rabbit:RabbitDriver')
+2021-11-05 15:03:50,521 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('amqp = oslo_messaging._drivers.impl_amqp1:ProtonDriver')
+2021-11-05 15:03:50,521 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('blocking = futurist:SynchronousExecutor')
+2021-11-05 15:03:50,521 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('threading = futurist:ThreadPoolExecutor')
+2021-11-05 15:03:50,549 - extension.py[line:189] - DEBUG: found extension EntryPoint.parse('eventlet = futurist:GreenThreadPoolExecutor')
+2021-11-05 15:03:50,550 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 15:03:50,562 - impl_rabbit.py[line:529] - DEBUG: [9df08bc6-a273-497e-9a03-dd0f91bc2f88] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 15:03:50,581 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'platform': 'Erlang/OTP 22.0.7', 'cluster_name': 'rabbit@rabbitmq1', 'capabilities': {'exchange_exchange_bindings': True, 'direct_reply_to': True, 'basic.nack': True, 'per_consumer_qos': True, 'publisher_confirms': True, 'authentication_failure_close': True, 'consumer_priorities': True, 'consumer_cancel_notify': True, 'connection.blocked': True}, 'version': '3.7.16', 'product': 'RabbitMQ', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.'}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 15:03:50,584 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 15:03:50,586 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 15:03:50,586 - impl_rabbit.py[line:558] - DEBUG: [9df08bc6-a273-497e-9a03-dd0f91bc2f88] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9993.
+2021-11-05 15:03:50,587 - impl_rabbit.py[line:247] - DEBUG: [9df08bc6-a273-497e-9a03-dd0f91bc2f88] Queue.declare: test_topic
+2021-11-05 15:03:50,589 - impl_rabbit.py[line:247] - DEBUG: [9df08bc6-a273-497e-9a03-dd0f91bc2f88] Queue.declare: test_topic.test_server
+2021-11-05 15:03:50,592 - impl_rabbit.py[line:247] - DEBUG: [9df08bc6-a273-497e-9a03-dd0f91bc2f88] Queue.declare: test_topic_fanout_550db655f57b45c2af7b6689daf8e37f
+2021-11-05 15:03:50,602 - server.py[line:44] - INFO: startting server
+2021-11-05 15:03:50,604 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,604 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 16/16, monotonic - 367831.859, last_heartbeat_sent - 367831.859, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,606 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,606 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367831.859, last_heartbeat_sent - 367831.859, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,608 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,608 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367831.859, last_heartbeat_sent - 367831.859, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,609 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,609 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367831.859, last_heartbeat_sent - 367831.859, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,611 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:50,611 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367831.875, last_heartbeat_sent - 367831.859, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:51,611 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:51,611 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367832.875, last_heartbeat_sent - 367831.859, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:53,612 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:53,612 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 16/16, monotonic - 367834.875, last_heartbeat_sent - 367831.859, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,720 - amqpdriver.py[line:285] - DEBUG: received message msg_id: 081318a8e59e46a284f1f91985b7670e reply to reply_60fc578e03e54e428ac7cd247c05296b
+2021-11-05 15:03:56,721 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,721 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 16/16, now - 17/19, monotonic - 367837.984, last_heartbeat_sent - 367837.984, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,721 - server.py[line:29] - INFO: ******************************
+2021-11-05 15:03:56,721 - server.py[line:30] - INFO: {'hello': 'client test'}
+2021-11-05 15:03:56,721 - server.py[line:31] - INFO: ******************************
+2021-11-05 15:03:56,721 - pool.py[line:143] - DEBUG: Pool creating new connection
+2021-11-05 15:03:56,723 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,723 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367837.984, last_heartbeat_sent - 367837.984, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,724 - impl_rabbit.py[line:529] - DEBUG: [facd9801-da05-449f-9c70-64323c48f12c] Connecting to AMQP server on 192.168.19.160:5672
+2021-11-05 15:03:56,728 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,728 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367837.984, last_heartbeat_sent - 367837.984, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,730 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,730 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367837.984, last_heartbeat_sent - 367837.984, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,731 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,732 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367837.984, last_heartbeat_sent - 367837.984, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,733 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,734 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367837.984, last_heartbeat_sent - 367837.984, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,736 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,736 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 17/19, monotonic - 367838.0, last_heartbeat_sent - 367837.984, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,740 - connection.py[line:376] - DEBUG: Start from server, version: 0.9, properties: {'platform': 'Erlang/OTP 22.0.7', 'cluster_name': 'rabbit@rabbitmq1', 'capabilities': {'exchange_exchange_bindings': True, 'direct_reply_to': True, 'basic.nack': True, 'per_consumer_qos': True, 'publisher_confirms': True, 'authentication_failure_close': True, 'consumer_priorities': True, 'consumer_cancel_notify': True, 'connection.blocked': True}, 'version': '3.7.16', 'product': 'RabbitMQ', 'information': 'Licensed under the MPL.  See https://www.rabbitmq.com/', 'copyright': 'Copyright (C) 2007-2019 Pivotal Software, Inc.'}, mechanisms: [b'PLAIN', b'AMQPLAIN'], locales: ['en_US']
+2021-11-05 15:03:56,741 - channel.py[line:105] - DEBUG: using channel_id: 1
+2021-11-05 15:03:56,742 - channel.py[line:446] - DEBUG: Channel open
+2021-11-05 15:03:56,742 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection bfa31f2f9b55486588db91c4f71b58c6
+2021-11-05 15:03:56,743 - impl_rabbit.py[line:558] - DEBUG: [facd9801-da05-449f-9c70-64323c48f12c] Connected to AMQP server on 192.168.19.160:5672 via [amqp] client with port 9997.
+2021-11-05 15:03:56,743 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: None/None, now - 4/4, monotonic - 367838.0, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection bfa31f2f9b55486588db91c4f71b58c6
+2021-11-05 15:03:56,743 - amqpdriver.py[line:122] - DEBUG: sending reply msg_id: 081318a8e59e46a284f1f91985b7670e reply queue: reply_60fc578e03e54e428ac7cd247c05296b time elapsed: 0.01600000000325963s
+2021-11-05 15:03:56,748 - amqpdriver.py[line:287] - DEBUG: received message with unique_id: 29079e97f0a14bae9082ac2ed367df8f
+2021-11-05 15:03:56,749 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,749 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 17/19, now - 18/22, monotonic - 367838.0, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,751 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:56,751 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367838.015, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:57,751 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:57,751 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367839.015, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:59,752 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:03:59,752 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367841.015, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:04:03,753 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:04:03,753 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367845.015, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:04:11,745 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection bfa31f2f9b55486588db91c4f71b58c6
+2021-11-05 15:04:11,745 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 4/4, now - 6/6, monotonic - 367853.0, last_heartbeat_sent - 367853.0, heartbeat int. - 60 for connection bfa31f2f9b55486588db91c4f71b58c6
+2021-11-05 15:04:11,753 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:04:11,753 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/22, monotonic - 367853.015, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:04:26,747 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection bfa31f2f9b55486588db91c4f71b58c6
+2021-11-05 15:04:26,747 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 6/6, monotonic - 367868.0, last_heartbeat_sent - 367853.0, heartbeat int. - 60 for connection bfa31f2f9b55486588db91c4f71b58c6
+2021-11-05 15:04:35,586 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:04:35,586 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 18/22, now - 18/23, monotonic - 367876.843, last_heartbeat_sent - 367838.0, heartbeat int. - 60 for connection d8ada37f0cb54604b00c101b7cb93338
+2021-11-05 15:04:41,749 - connection.py[line:712] - DEBUG: heartbeat_tick : for connection bfa31f2f9b55486588db91c4f71b58c6
+2021-11-05 15:04:41,749 - connection.py[line:734] - DEBUG: heartbeat_tick : Prev sent/recv: 6/6, now - 6/7, monotonic - 367883.0, last_heartbeat_sent - 367853.0, heartbeat int. - 60 for connection bfa31f2f9b55486588db91c4f71b58c6
