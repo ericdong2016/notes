@@ -1,0 +1,9 @@
+https://www.liwenzhou.com/posts/Go/read_gin_sourcecode/
+
+
+
+1. gin
+2. context
+3. routergroup
+4. response_writer
+5. path, tree  -> httprouter£¨router, httprouter£©
